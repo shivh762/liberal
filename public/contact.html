@@ -1,0 +1,58 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+</head>
+
+<body>
+  <nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  </nav>
+  <div class="image-row desktop-only">
+    <div class="left">
+      <img src="https://i.imgur.com/4LjTWUF.png" alt="Shivum Ganesh" style="width:auto; height:100px;" class="img">
+    </div>
+    <div class="center">
+    <img src="https://i.imgur.com/Brpcxys.png" alt="Shivum Ganesh" style="width:auto; height:100px;" class="img">
+    </div>
+    <div class="right">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/FDR_in_1933_%283x4%29.jpg/800px-FDR_in_1933_%283x4%29.jpg" alt="Shivum Ganes
+    h" style="width:auto; height:100px;" class="img">
+    <img src="https://cdn.britannica.com/69/4769-050-CBA1A512/Harry-S-Truman-1945.jpg" alt="Shivum Ganes
+    h" style="width:auto; height:100px;" class="img">
+    </div>
+  </div>
+  <div class="image-row mobile-only">
+    <img src="https://i.imgur.com/4LjTWUF.png" alt="Shivum Ganesh" style="width:auto; height:100px;" class="img">
+  </div>
+  <h1>Contact Us</h1>
+  <form id="contact-form" action="https://formspree.io/f/xwpovlbp" method="POST">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+    <button type="submit">Send</button>
+  </form>
+
+  <p id="form-message"></p>
+  <script src="index.js"></script>
+</body>
+
+</html>
