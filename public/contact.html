@@ -33,28 +33,6 @@ Online HTML, CSS and JavaScript editor to run code online.
   const db = firebase.firestore();
 </script>
 
-<script>
-  document.getElementById("registerForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById("reg-name").value;
-    const email = document.getElementById("reg-email").value;
-
-    db.collection("registrations").add({
-      name: name,
-      email: email,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp()
-    })
-    .then(() => {
-      document.getElementById("successMessage").style.display = "block";
-      document.getElementById("registerForm").reset();
-    })
-    .catch((error) => {
-      console.error("Error adding document: ", error);
-    });
-  });
-</script>
-
 
 <body>
   <nav class="navbar">
@@ -107,10 +85,35 @@ Online HTML, CSS and JavaScript editor to run code online.
 
 <p id="successMessage" style="display: none; color: green;">Registered successfully!</p>
 
-  <footer class="footer">
-    <p>&copy; 2025 Liberal Party of California. All rights reserved.</p>
-  </footer>
-  <script src="index.js"></script>
+<footer class="footer">
+  <p>&copy; 2025 Liberal Party of California. All rights reserved.</p>
+</footer>
+<script src="index.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("reg-name").value;
+      const email = document.getElementById("reg-email").value;
+
+      db.collection("registrations").add({
+        name: name,
+        email: email,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      })
+      .then(() => {
+        document.getElementById("successMessage").style.display = "block";
+        document.getElementById("registerForm").reset();
+      })
+      .catch((error) => {
+        console.error("Error adding document: ", error);
+      });
+    });
+  });
+</script>
+
 </body>
 
 </html>
