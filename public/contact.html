@@ -37,8 +37,8 @@ Online HTML, CSS and JavaScript editor to run code online.
   document.getElementById("registerForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
+    const name = document.getElementById("reg-name").value;
+    const email = document.getElementById("reg-email").value;
 
     db.collection("registrations").add({
       name: name,
@@ -100,8 +100,8 @@ Online HTML, CSS and JavaScript editor to run code online.
 
 <h2>Register</h2>
 <form id="registerForm">
-  <input type="text" id="name" placeholder="Full Name" required><br><br>
-  <input type="email" id="email" placeholder="Email" required><br><br>
+  <input type="text" id="reg-name" placeholder="Full Name" required><br><br>
+  <input type="email" id="reg-email" placeholder="Email" required><br><br>
   <button type="submit">Register</button>
 </form>
 
