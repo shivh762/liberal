@@ -5,6 +5,10 @@
     margin-bottom: 20px;
 }
 
+.main-text {
+  /* No need for margin-right because float handles it */
+}
+
 .float-right-image {
   float: right;
   margin-left: 20px;
@@ -12,7 +16,17 @@
   width: auto;
   height: 200px;
 }
-l
+
+@media (max-width: 768px) {
+  .float-right-image {
+    float: none;
+    display: block;
+    margin: 10px auto;
+    width: 100%;      /* make it responsive */
+    height: auto;     /* keep aspect ratio */
+  }
+}
+
 .image-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
