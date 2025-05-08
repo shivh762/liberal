@@ -5,6 +5,15 @@
     margin-bottom: 20px;
 }
 
+.fixed-right-image {
+  position: absolute;
+  top: 150px;  /* adjust as needed */
+  right: 20px;
+  width: auto;
+  height: 200px; /* or whatever height you want */
+  z-index: 10;
+}
+
 .image-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
